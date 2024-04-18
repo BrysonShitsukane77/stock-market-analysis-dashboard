@@ -39,6 +39,9 @@ def transform(data, *args, **kwargs):
     # Drop duplicates
     data.drop_duplicates(inplace=True)
 
+    # Drop null values
+    #data.dropna(subset=['stock_name'], inplace=True)
+
     # Log the results of the transformations
     print("After Transformation - Null Value Counts:")
     print(data.isnull().sum())

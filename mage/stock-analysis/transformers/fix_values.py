@@ -18,6 +18,11 @@ def transform(stock_data, *args, **kwargs):
     # Round the values to 2 decimal places
     stock_data = stock_data.round(2)
 
+    # Return dates in ascending order
+    stock_data.sort_values(by=[ 'datetime'], ascending=[False], inplace=True)
+    
+    stock_data.reset_index(drop=True, inplace=True)
+
     return stock_data
 
 
