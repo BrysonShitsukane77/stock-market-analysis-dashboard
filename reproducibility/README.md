@@ -66,7 +66,7 @@ IdentityFile <path to your private key> e.g.  ~/.ssh/privatekey
    `sudo apt-get update`
 4. clone repo
    <br>
-   `git clone https://github.com/PandaKata/dezoomcamp-project.git`
+   `git clone https://github.com/BrysonShitsukane77/stock-market-analysis-dashboard.git`
 5. make new directory for credentials
    <br>
    `mkdir -p .google/credentials`
@@ -116,6 +116,40 @@ pip install -r requirements.txt
     
 ## Setup Mage
 
+## Let's get started
+
+You'll need a Docker Compose template for getting started with a new Mage project. It requires Docker to be installed locally. If Docker is not installed, please follow the instructions [here](https://docs.docker.com/get-docker/). 
+
+You can start by cloning my repo:
+
+```bash
+git clone https://github.com/BrysonShitsukane77/stock-market-analysis-dashboard
+```
+
+Navigate to the repo:
+
+```bash
+cd mage-data-engineering-zoomcamp
+```
+
+Rename `dev.env` to simply `.env`— this will _ensure_ the file is not committed to Git by accident, since it _will_ contain credentials in the future.
+
+Now, let's build the container
+
+```bash
+docker-compose build
+```
+
+Finally, start the Docker container:
+
+```bash
+docker-compose up
+```
+
+Now, navigate to http://localhost:6789 in your browser! You're ready to get started with the project! 
+
+
+By that, you've initialized a new mage repository. It will be present in your project under the name `stock-analysis`. 
 
   
 ## Setup dbt
