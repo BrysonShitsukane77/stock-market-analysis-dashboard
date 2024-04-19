@@ -116,8 +116,6 @@ pip install -r requirements.txt
     
 ## Setup Mage
 
-## Let's get started
-
 You'll need a Docker Compose template for getting started with a new Mage project. It requires Docker to be installed locally. If Docker is not installed, please follow the instructions [here](https://docs.docker.com/get-docker/). 
 
 You can start by cloning my repo:
