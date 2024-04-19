@@ -4,7 +4,6 @@ blocks:
   configuration: {}
   downstream_blocks:
   - data_mapping
-  - fix_values
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -19,14 +18,15 @@ blocks:
 - all_upstream_blocks_executed: true
   color: null
   configuration: {}
-  downstream_blocks: []
+  downstream_blocks:
+  - fix_values
   executor_config: null
   executor_type: local_python
   has_callback: false
   language: python
   name: data_mapping
   retry_config: null
-  status: updated
+  status: executed
   timeout: null
   type: transformer
   upstream_blocks:
@@ -37,7 +37,6 @@ blocks:
   configuration: {}
   downstream_blocks:
   - export_to_gcs
-  - resonant_ash
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -48,24 +47,8 @@ blocks:
   timeout: null
   type: transformer
   upstream_blocks:
-  - load_api_data
+  - data_mapping
   uuid: fix_values
-- all_upstream_blocks_executed: true
-  color: null
-  configuration: {}
-  downstream_blocks: []
-  executor_config: null
-  executor_type: local_python
-  has_callback: false
-  language: python
-  name: resonant ash
-  retry_config: null
-  status: failed
-  timeout: null
-  type: transformer
-  upstream_blocks:
-  - fix_values
-  uuid: resonant_ash
 - all_upstream_blocks_executed: true
   color: null
   configuration: {}

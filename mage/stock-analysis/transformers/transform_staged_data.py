@@ -34,21 +34,21 @@ def transform(data, *args, **kwargs):
     print(data_types)
 
     # Change 'datetime' column to pandas datetime
-    data['datetime'] = pd.to_datetime(data['datetime'])
+    #data['datetime'] = pd.to_datetime(data['datetime'])
 
     # Drop duplicates
-    data.drop_duplicates(inplace=True)
+    #data.drop_duplicates(inplace=True)
 
     # Drop null values
     #data.dropna(subset=['stock_name'], inplace=True)
 
     # Log the results of the transformations
-    print("After Transformation - Null Value Counts:")
-    print(data.isnull().sum())
-    print("\nAfter Transformation - Duplicate Counts:")
-    print(data.duplicated().sum())
-    print("\nAfter Transformation - Data Types:")
-    print(data.dtypes)
+    # print("After Transformation - Null Value Counts:")
+    # print(data.isnull().sum())
+    # print("\nAfter Transformation - Duplicate Counts:")
+    # print(data.duplicated().sum())
+    # print("\nAfter Transformation - Data Types:")
+    # print(data.dtypes)
 
     return data
 

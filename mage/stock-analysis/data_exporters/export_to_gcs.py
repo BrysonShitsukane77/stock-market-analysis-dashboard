@@ -20,7 +20,7 @@ def export_data_to_google_cloud_storage(stock_data: DataFrame, **kwargs) -> None
     config_profile = 'default'
 
     bucket_name = 'verdant-legacy-414217-stock-prices-bucket'
-    object_key = 'stock_prices2.parquet'
+    object_key = 'stock_prices.parquet'
 
     # Save DataFrame to a local Parquet file
     # local_file_path = 'stock_data.parquet'
