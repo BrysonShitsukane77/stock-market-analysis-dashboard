@@ -14,9 +14,7 @@ The primary objective of this project is to analyze historical stock price data 
 
 ## Data Source
 
-The project will utilize historical stock price data obtained from Twelve Data using their API. This data will be processed and analyzed to extract meaningful insights for stock market analysis.
-
-api_url = f"https://api.twelvedata.com/time_series?symbol={stock}&interval={interval}&apikey={api_key}&format=CSV&outputsize=5000&delimiter=,"
+The project will utilize historical stock price data obtained from Twelve Data using their API. This data will be processed and analyzed to extract meaningful insights for stock market analysis. This is the [api_url](https://api.twelvedata.com/time_series?symbol={stock}&interval={interval}&apikey={api_key}&format=CSV&outputsize=5000&delimiter=,)
 
 ## Tools
 - GCP (GCS & BigQuery)
