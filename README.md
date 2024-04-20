@@ -16,6 +16,17 @@ The primary objective of this project is to analyze historical stock price data 
 
 The project will utilize historical stock price data obtained from Twelve Data using their API. This data will be processed and analyzed to extract meaningful insights for stock market analysis.
 
+api_url = f"https://api.twelvedata.com/time_series?symbol={stock}&interval={interval}&apikey={api_key}&format=CSV&outputsize=5000&delimiter=,"
+
+## Tools
+- GCP (GCS & BigQuery)
+- Terraform
+- Docker
+- Python
+- Mage
+- dbt
+- Looker Studio
+
 ## Methodology
 
 The project will follow these steps:
@@ -31,6 +42,9 @@ The project will follow these steps:
 9. **Data Analysis:** Various analysis techniques will be applied to identify trends and patterns in stock prices.
 10. **Data Visualization with Google Data Studio:** The final aggregated tables are visualized using Google Data Studio;and iInsights will be generated based on the analysis to help stakeholders make informed decisions.
 
+## Solution
+
+
 
 ## Conclusion
 
@@ -40,3 +54,50 @@ By analyzing historical stock price data, this project aims to provide valuable 
 
 ![image](https://github.com/BrysonShitsukane77/stock-market-analysis-dashboard/assets/124519816/30485990-01ea-48f9-b19b-536ef96ba84f)
 
+## Reproducibility
+
+To reproduce the whole project, go to this [link](https://github.com/BrysonShitsukane77/stock-market-analysis-dashboard/blob/main/reproducibility/README.md)
+
+## Repository Structure
+
+stock-market-analysis-dashboard/
+├── dbt/
+│   ├── stock_analysis/
+│       └── models
+|            └── marts
+|                └── dim_date.sql
+|                └── fact_stock_moving_avg.sql
+|            └── staging
+|                └── sources.yml
+|                └── stg_date_conversion.sql
+|                └── stg_stock_price_data.sql
+|        └── dbt_project.yml
+|        └── packages.yml
+│── mage/
+    ├── stock_analysis/
+        └── data_exporters
+│                 └── export_to_bigquery.py
+|                 └── export_to_gcs
+|       └── data_loaders
+|                 └── load_api_data.py
+|                 └── load_gcs_stock_data.py
+|       └── pipelines
+|                 └── api_to_gcs     
+|                 └── gcs_to_bigquery
+|       └── transformers
+|                 └── data_mapping.py
+|                 └── fix_values.py
+|                 └── transform_staged_data.py
+|       └── io_config.yaml
+|       └── metadata.yaml
+|       └── requirements.txt
+|   ├── Dockerfile
+|   ├── sdocker-compose.yml
+|   ├── requirements.txt
+|── reproducibility/
+|       └── README.md
+|── terraform/
+|       └── main.tf
+|       └── variables.tf
+|── .gitignore      
+│── README.md       
