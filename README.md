@@ -58,44 +58,46 @@ To reproduce the whole project, go to this [link](https://github.com/BrysonShits
 
 ## Repository Structure
 
+<pre>
 stock-market-analysis-dashboard/
 ├── dbt/
 │   ├── stock_analysis/
-│       └── models
-|            └── marts
-|                └── dim_date.sql
-|                └── fact_stock_moving_avg.sql
-|            └── staging
-|                └── sources.yml
-|                └── stg_date_conversion.sql
-|                └── stg_stock_price_data.sql
-|        └── dbt_project.yml
-|        └── packages.yml
-│── mage/
-    ├── stock_analysis/
-        └── data_exporters
-│                 └── export_to_bigquery.py
-|                 └── export_to_gcs
-|       └── data_loaders
-|                 └── load_api_data.py
-|                 └── load_gcs_stock_data.py
-|       └── pipelines
-|                 └── api_to_gcs     
-|                 └── gcs_to_bigquery
-|       └── transformers
-|                 └── data_mapping.py
-|                 └── fix_values.py
-|                 └── transform_staged_data.py
-|       └── io_config.yaml
-|       └── metadata.yaml
-|       └── requirements.txt
-|   ├── Dockerfile
-|   ├── sdocker-compose.yml
-|   ├── requirements.txt
-|── reproducibility/
-|       └── README.md
-|── terraform/
-|       └── main.tf
-|       └── variables.tf
-|── .gitignore      
-│── README.md       
+│   │   ├── models
+│   │   │   └── marts
+│   │   │       └── dim_date.sql
+│   │   │       └── fact_stock_moving_avg.sql
+│   │   ├── staging
+│   │   │   └── sources.yml
+│   │   │   └── stg_date_conversion.sql
+│   │   │   └── stg_stock_price_data.sql
+│   │   └── dbt_project.yml
+│   │   └── packages.yml
+├── mage/
+│   ├── stock_analysis/
+│   │   └── data_exporters
+│   │   │   └── export_to_bigquery.py
+│   │   │   └── export_to_gcs
+│   │   └── data_loaders
+│   │   │   └── load_api_data.py
+│   │   │   └── load_gcs_stock_data.py
+│   │   └── pipelines
+│   │   │   └── api_to_gcs  
+│   │   │   └── gcs_to_bigquery
+│   │   └── transformers
+│   │   │   └── data_mapping.py
+│   │   │   └── fix_values.py
+│   │   │   └── transform_staged_data.py
+│   │   └── io_config.yaml
+│   │   └── metadata.yaml
+│   │   └── requirements.txt
+│   ├── Dockerfile
+│   ├── sdocker-compose.yml
+│   └── requirements.txt
+├── reproducibility/
+│   └── README.md
+├── terraform/
+│   └── main.tf
+│   └── variables.tf
+├── .gitignore
+└── README.md
+</pre>
