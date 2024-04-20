@@ -35,3 +35,8 @@ The project will follow these steps:
 ## Conclusion
 
 By analyzing historical stock price data, this project aims to provide valuable insights for potential stock investments. The project's outcome will assist stakeholders in making informed decisions regarding stock investments, ultimately enhancing their investment strategies.
+
+## Dashboard
+
+![image](https://github.com/BrysonShitsukane77/stock-market-analysis-dashboard/assets/124519816/30485990-01ea-48f9-b19b-536ef96ba84f)
+
