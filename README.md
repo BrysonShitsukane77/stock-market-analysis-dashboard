@@ -38,7 +38,7 @@ The project will follow these steps:
 7. **Orchestration with Mage:** Mage is used as an orchestrator throughout the process.
 8. **Data Modeling and Complex Transformation with dbt:** dbt is used for data modeling and complex transformations to generate final aggregated tables.
 9. **Data Analysis:** Various analysis techniques will be applied to identify trends and patterns in stock prices.
-10. **Data Visualization with Google Data Studio:** The final aggregated tables are visualized using Google Data Studio;and iInsights will be generated based on the analysis to help stakeholders make informed decisions.
+10. **Data Visualization with Google Data Studio:** The final aggregated tables are visualized using Google Data Studio; and iInsights will be generated based on the analysis to help stakeholders make informed decisions.
 
 ## Solution
 
