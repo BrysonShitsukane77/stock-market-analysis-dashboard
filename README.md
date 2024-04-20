@@ -66,10 +66,10 @@ stock-market-analysis-dashboard/
 │   │   │   └── marts
 │   │   │       └── dim_date.sql
 │   │   │       └── fact_stock_moving_avg.sql
-│   │   ├── staging
-│   │   │   └── sources.yml
-│   │   │   └── stg_date_conversion.sql
-│   │   │   └── stg_stock_price_data.sql
+│   │   │   └── staging
+│   │   │       └── sources.yml
+│   │   │       └── stg_date_conversion.sql
+│   │   │       └── stg_stock_price_data.sql
 │   │   └── dbt_project.yml
 │   │   └── packages.yml
 ├── mage/
@@ -91,7 +91,7 @@ stock-market-analysis-dashboard/
 │   │   └── metadata.yaml
 │   │   └── requirements.txt
 │   ├── Dockerfile
-│   ├── sdocker-compose.yml
+│   ├── docker-compose.yml
 │   └── requirements.txt
 ├── reproducibility/
 │   └── README.md
