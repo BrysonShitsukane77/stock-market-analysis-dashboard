@@ -176,10 +176,47 @@ By that, you've initialized a new mage repository. It will be present in your pr
   
 2. go to jobs in dbt cloud and create new job with the following parameters; this will schedule the dbt transformations daily.
   
- 
-
 ## Visualization in Looker Studio
 go to [Looker Studio](https://lookerstudio.google.com/) &rarr; create &rarr; BigQuery &rarr; choose your project, dataset & transformed table
 
-## Flows
-Your flows / jobs should look like this, when everything is running correctly:
+# Instructions (Summary)
+These instructions are at a higher level.
+
+**1. Set up infrastructure --- Terraform**
+   - Install and open Terraform
+   - Deploy main.tf and variables.tf files
+   - Add your GCP credentials to your machine.
+   - Terraform init
+   - Terraform plan
+   - Terraform apply
+
+**2. Review infrastructure --- GCP**
+   - Login to GCP
+   - Check that your VM instance, bucket, and bigquery dataset/table are setup.
+
+**3. Extract Data --- Mage**
+   - Open Mage in a Docker container
+   - Run the first DAG/Pipeline -- api_to_gcs
+     - Run load_api_data.py (loading bloc)
+     - Run data_mapping.py and fix_values.py (transformation blocs)
+     - Run export_to_gcs.py (exporting bloc)
+   
+   - Run the second DAG/Pipeline -- gcs_to_bigquery
+     - Run load_gcs_stock_data.py (loading bloc)
+     - Run transform_staged_data.py (transformation bloc)
+     - Run export_to_bigquery.py (exporting bloc)
+
+**4. Transform and Load --- dbt**
+   - Open dbt/stock_analysis/
+   - Open models/
+   - You'll find all the defined models (staging, dimensions and fact models)
+   - Run in Terminal : dbt run  
+   - Go to BigQuery, refresh the page to load your newly created tables
+     
+
+**5. Data Visualisation --- Looker**
+   - Navigate to Looker Studio via your search engine
+   - Create (top left)
+   - Data Source
+   - BigQuery
+   - Create your dashboard
